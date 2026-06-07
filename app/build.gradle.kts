@@ -17,9 +17,19 @@ android {
         versionName = "1.1.0"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("../alexwater-release.jks")
+            storePassword = "alex123"
+            keyAlias = "alexwater"
+            keyPassword = "alex123"
+        }
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -53,20 +63,11 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.8.5")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.7")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
-
-    // Room
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
-
-    // DataStore
     implementation("androidx.datastore:datastore-preferences:1.1.1")
-
-    // WorkManager
     implementation("androidx.work:work-runtime-ktx:2.9.1")
-
-    // Accompanist (for pull-to-refresh, etc.)
     implementation("com.google.accompanist:accompanist-drawablepainter:0.36.0")
-
     debugImplementation("androidx.compose.ui:ui-tooling")
 }
