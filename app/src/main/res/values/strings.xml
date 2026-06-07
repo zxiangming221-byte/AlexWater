@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AlexWater</string>
+    <string name="notification_channel_name">喝水提醒</string>
+    <string name="notification_channel_desc">定时提醒你喝水，保持健康</string>
+    <string name="notification_title">💧 该喝水啦！</string>
+    <string name="notification_body">你已经%1$d分钟没喝水了，快喝一杯吧</string>
+    <string name="notification_action_drink">已喝250ml</string>
+    <string name="notification_action_skip">跳过</string>
+    <string name="foreground_service_label">AlexWater 喝水提醒运行中</string>
+</resources>

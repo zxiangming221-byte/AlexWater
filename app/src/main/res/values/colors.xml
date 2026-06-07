@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#1B9CEC</color>
+    <color name="water_primary">#1B9CEC</color>
+    <color name="water_primary_dark">#0D7BC0</color>
+    <color name="water_light">#E3F2FD</color>
+    <color name="water_surface">#F5F9FC</color>
+    <color name="water_accent">#00BCD4</color>
+    <color name="water_warning">#FF9800</color>
+    <color name="water_success">#4CAF50</color>
+    <color name="glass_white">#F2F6FA</color>
+</resources>
