@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AlexWater</string>
+
+    <!-- 主页 -->
+    <string name="today_drinking">今日饮水</string>
+    <string name="completion">完成度</string>
+    <string name="today_records">今日记录</string>
+
+    <!-- 提醒 -->
+    <string name="reminder_title">提醒设置</string>
+    <string name="reminder_toggle">提醒开关</string>
+    <string name="reminder_plan">提醒方案</string>
+    <string name="hourly">每小时</string>
+    <string name="every_1_5h">每 1.5 小时</string>
+    <string name="every_2h">每 2 小时</string>
+    <string name="custom_interval">使用自定义间隔</string>
+    <string name="custom_times">使用自定义时间点</string>
+    <string name="dnd_title">免打扰时段</string>
+    <string name="dnd_hint">在这些时段内暂停提醒</string>
+    <string name="add_time_slot">+ 添加时间</string>
+    <string name="add_dnd_period">+ 添加时段</string>
+    <string name="notification_preview">通知预览</string>
+
+    <!-- 统计 -->
+    <string name="stats_title">饮水统计</string>
+    <string name="this_week">本周</string>
+    <string name="last_week">上周</string>
+    <string name="daily_avg">日均 (ml)</string>
+    <string name="best_day">最佳日 (ml)</string>
+    <string name="goal_days">达标天数</string>
+    <string name="daily_intake">每日摄入</string>
+    <string name="trend_analysis">趋势分析</string>
+    <string name="time_distribution">时段分布</string>
+
+    <!-- 历史 -->
+    <string name="history_title">历史记录</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">设置</string>
+    <string name="appearance">外观</string>
+    <string name="theme_mode">主题模式</string>
+    <string name="dark_theme">暗色</string>
+    <string name="light_theme">浅色</string>
+    <string name="daily_goal">每日目标</string>
+    <string name="daily_goal_desc">每日喝水目标（毫升）</string>
+    <string name="cup_sizes">预设杯量</string>
+    <string name="cup_sizes_desc">设置主页快捷按钮的三个杯量值</string>
+    <string name="about">关于</string>
+    <string name="version">版本</string>
+    <string name="design_system">设计系统</string>
+
+    <!-- 通知 -->
+    <string name="channel_name">喝水提醒</string>
+    <string name="channel_desc">定时提醒你喝水，保持水分充足</string>
+    <string name="notif_title">💧 该喝水了</string>
+    <string name="notif_body">你已经 %1$s 没喝水了，补充一下水分吧</string>
+</resources>
