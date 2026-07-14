@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- 背景：水蓝色渐变 -->
+
+    <!-- Edge 风格波浪水滴 -->
+    <!-- 第一层波浪圆弧 -->
     <path
-        android:fillColor="#0A0F14"
-        android:pathData="M0,0h108v108H0z" />
-    <!-- 水滴形状 -->
+        android:pathData="M54,80 C54,80 30,60 30,40 C30,20 54,12 54,12 C54,12 78,20 78,40 C78,60 54,80 54,80Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="30"
+                android:startY="20"
+                android:endX="78"
+                android:endY="80"
+                android:type="linear">
+                <item android:offset="0" android:color="#FF42A5F5" />
+                <item android:offset="1" android:color="#FF1565C0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 第二层波浪高光 -->
     <path
-        android:fillColor="#2196F3"
-        android:pathData="M54,28c0,0 -24,28 -24,36c0,13.25 10.75,24 24,24s24,-10.75 24,-24c0,-8 -24,-36 -24,-36z" />
+        android:pathData="M54,70 C54,70 36,54 36,40 C36,28 48,22 54,20"
+        android:strokeWidth="3"
+        android:strokeColor="#99FFFFFF"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round" />
+
+    <!-- Edge 风格底部波浪线 -->
+    <path
+        android:pathData="M32,50 C40,45 48,52 54,48 C60,44 68,50 76,46"
+        android:strokeWidth="2.5"
+        android:strokeColor="#66FFFFFF"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round" />
+
+    <!-- 顶部高光点 -->
+    <path
+        android:pathData="M48,28 A3,3 0,1,1 48,27.9Z"
+        android:fillColor="#CCFFFFFF" />
 </vector>
