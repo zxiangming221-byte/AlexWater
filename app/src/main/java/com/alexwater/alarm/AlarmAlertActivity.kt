@@ -24,6 +24,8 @@ import androidx.compose.ui.unit.sp
 import com.alexwater.AlexWaterApp
 import com.alexwater.model.Theme
 import com.alexwater.ui.theme.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class AlarmAlertActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +50,7 @@ class AlarmAlertActivity : ComponentActivity() {
                 AlarmAlertScreen(
                     cupSizes = settings.cupSizes,
                     onRecord = { amount ->
-                        repo.addRecord(amount)
+                        kotlinx.coroutines.GlobalScope.launch { repo.addRecord(amount) }
                         finish()
                     },
                     onDismiss = { finish() }

@@ -178,7 +178,7 @@ fun SettingsScreen(viewModel: SettingsViewModel) {
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text("版本", fontSize = 15.sp, color = MaterialTheme.colorScheme.onBackground)
-                    Text("1.0", fontSize = 15.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text("2.0", fontSize = 15.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 Divider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 0.5.dp)
                 Row(
