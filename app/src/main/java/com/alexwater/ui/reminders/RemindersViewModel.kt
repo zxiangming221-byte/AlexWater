@@ -31,7 +31,7 @@ class RemindersViewModel(application: Application) : AndroidViewModel(applicatio
 
 
     fun updateCustomInterval(minutes: Int) {
-        update { it.copy(customIntervalMinutes = minutes) }
+        update { it.copy(plan = ReminderPlan.CUSTOM_INTERVAL, customIntervalMinutes = minutes) }
     }
 
     fun addCustomTime(time: LocalTime) {

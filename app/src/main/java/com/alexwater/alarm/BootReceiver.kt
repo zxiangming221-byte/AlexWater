@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import com.alexwater.AlexWaterApp
+import com.alexwater.alarm.AlarmScheduler
+import com.alexwater.alarm.CalendarReminderManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -22,6 +24,7 @@ class BootReceiver : BroadcastReceiver() {
                     if (config.enabled) {
                         AlarmScheduler.scheduleReminders(context, config)
                     }
+                    CalendarReminderManager.sync(context, config)
                 } catch (_: Exception) { }
             }
         }

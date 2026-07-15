@@ -29,11 +29,13 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         .stateIn(viewModelScope, SharingStarted.Eagerly, false)
 
     init {
-        // Observe today's records from Room
+        // 监听全部记录，每次变化时按"今天"过滤 — 跨天自动归零
         viewModelScope.launch {
-            repository.getRecordsByDate(LocalDate.now()).collect { records ->
-                _todayRecords.value = records.sortedByDescending { it.timestamp }
-                _todayMl.value = records.sumOf { it.amountMl }
+            repository.records.collect { allRecords ->
+                val today = LocalDate.now()
+                val todayList = allRecords.filter { it.date == today }.sortedByDescending { it.timestamp }
+                _todayRecords.value = todayList
+                _todayMl.value = todayList.sumOf { it.amountMl }
             }
         }
     }

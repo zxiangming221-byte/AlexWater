@@ -34,7 +34,7 @@ object AlarmScheduler {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         for (i in 0 until MAX_ALARMS) {
             val intent = Intent(context, AlarmReceiver::class.java).apply {
-                action = "ALARM_TRIGGER_$i"
+                action = "ALARM_TRIGGER_${ALARM_REQUEST_BASE + i}"
             }
             val pendingIntent = PendingIntent.getBroadcast(
                 context, ALARM_REQUEST_BASE + i, intent,

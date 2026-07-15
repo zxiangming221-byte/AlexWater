@@ -19,10 +19,7 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "alexwater.db"
-                )
-                    .fallbackToDestructiveMigration()
-                    .build()
-                    .also { INSTANCE = it }
+                ).build().also { INSTANCE = it }
             }
         }
     }

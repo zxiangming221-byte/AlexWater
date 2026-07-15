@@ -71,7 +71,8 @@ class AppRepository(private val context: Context) {
     suspend fun addRecord(amountMl: Int) {
         withContext(Dispatchers.IO) {
             val now = System.currentTimeMillis()
-            dao.insert(WaterRecordEntity(timestamp = now, amountMl = amountMl, date = LocalDate.now().format(dateFmt)))
+            val date = LocalDate.now().format(dateFmt)
+            dao.insert(WaterRecordEntity(timestamp = now, amountMl = amountMl, date = date))
         }
     }
 

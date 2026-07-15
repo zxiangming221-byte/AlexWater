@@ -100,7 +100,7 @@ fun StatsScreen(viewModel: StatsViewModel) {
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
         ) {
             Column(modifier = Modifier.padding(16.dp)) {
-                TrendRow("7 日均值", "${stats.averageMl} ml", trend = "↑ 5%", trendUp = true)
+                TrendRow("7 日均值", "${stats.averageMl} ml")
                 TrendRow("本周最高", "${stats.bestMl} ml")
                 TrendRow("本周最低", "${stats.days.minOfOrNull { it.totalMl } ?: 0} ml")
                 TrendRow("摄入波动", "±${((stats.bestMl - (stats.days.minOfOrNull { it.totalMl } ?: 0)) / 2)} ml")
